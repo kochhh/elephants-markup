@@ -10,7 +10,7 @@ module.exports = function() {
 				// dir: "auto",
 				// lang: "en-US",
 				path: "static/i/general/favicons/",
-				url: "/",
+				url: "/dist/",
 				// display: "standalone",
 				// orientation: "any",
 				// start_url: "/?homescreen=1",
