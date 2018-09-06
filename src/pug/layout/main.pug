@@ -1,0 +1,35 @@
+include ../mixins
+block variables
+
+doctype html
+|
+|
+<html class="no-js" lang="en">
+head
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+  title #{title}
+  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  |
+  | <!-- inject:head:html -->
+  | <!-- endinject -->
+  link(href="static/css/main.css" rel="stylesheet")
+  script(src="static/js/modernizr-custom.js")
+body(class=pageClass)
+  block background
+  include ../modules/header
+  include ../modules/navigation
+  main.main
+    block content
+  include ../modules/footer
+  .layout-grid
+    .row
+      - var n = 1
+      while n < 13
+        .col-1
+          div= n++
+  script(src="static/js/libs.js")
+  script(src="static/js/main.js")
+|
+|
+</html>

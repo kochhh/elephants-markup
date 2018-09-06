@@ -1,0 +1,35 @@
+header.header
+  .navbar
+    .container
+      .navbar-container
+        button.navbar-toggler.collapsed(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+          span.navbar-toggler-bar
+          span.navbar-toggler-bar
+          span.navbar-toggler-bar
+        .navbar-side
+          .navbar-item
+            a.navbar-item__link(href="#")
+              span.navbar-item__icon
+                +icon('basket')
+                .navbar-item__count 1
+              span.navbar-item__text 2 300 ₽
+          .navbar-item
+            a.navbar-item__link(href="#")
+              span.navbar-item__icon
+                +icon('login')
+              span.navbar-item__text Войти
+  .navbar-collapse.collapse#navbarNav
+    .container
+      ul.navbar-nav
+        .nav-item
+          a.nav-link(href="#") Торты
+        .nav-item.active
+          a.nav-link(href="#")
+            | Пироги 
+            span.sr-only (current)
+        .nav-item
+          a.nav-link(href="#") Десерты
+        .nav-item
+          a.nav-link(href="#") Выпечка
+        .nav-item
+          a.nav-link(href="#") Пирожки

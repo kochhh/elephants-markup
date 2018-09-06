@@ -1,0 +1,132 @@
+.page-inner {
+  .main {
+    @include media-breakpoint-down(md) {
+      position: relative;
+
+      &::after {
+        @include size(212px, 225px);
+        background-image: url('../img/general/content-decor.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 320px;
+        z-index: -1;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include fixed(0, 0, 0, 0);
+      z-index: 10;
+
+      &::before {
+        background-color: $body-bg;
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.content-container,
+.content-row,
+.content-col,
+.content-wrapper,
+.content {
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+}
+
+.content-wrapper {
+  @include media-breakpoint-up(lg) {
+    background-color: $body-bg;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      @include size(462px, 490px);
+      background-image: url('../img/general/content-decor.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: '';
+      position: absolute;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: $column-width-lg*2 + $grid-gutter-width;
+    padding-right: $column-width-lg + $column-width-lg/2 + $grid-gutter-width;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: $column-width-xl*2 + $grid-gutter-width;
+    padding-right: $column-width-xl + $column-width-xl/2 + $grid-gutter-width;
+  }
+}
+
+.text-list {
+  @include list-unstyled;
+  margin-bottom: 1rem;
+
+  > li {
+    margin-bottom: 1.25em;
+    padding-left: rem(30);
+    position: relative;
+
+    &::before {
+      border-top: 2px solid $primary;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 0.65em;
+      width: 13px;
+    }
+  }
+}
+
+.about-phone {
+  margin-top: 40px;
+  margin-bottom: 0;
+
+  &__title {
+    color: $primary;
+    font-size: rem(19);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  &__number {
+    font-family: $headings-font-family;
+    font-size: rem(24);
+    margin-bottom: 0;
+
+    a {
+      color: $body-color;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

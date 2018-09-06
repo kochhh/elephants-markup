@@ -1,0 +1,26 @@
+extends ../layout/main
+
+block variables
+  - var title = 'О кондитерской — Белые слоны'
+  - var pageClass = 'page-inner'
+
+block background
+  .background(style="background-image: url('http://picsum.photos/1366/768?photo=60');")
+
+block content
+  .container.content-container
+    .row.content-row
+      .col-lg-8.content-col
+        .content-wrapper
+          .content
+            h1.page-title О кондитерской
+            ul.text-list
+              li Берём только свежие продукты местных фермеров
+              li Готовим по собственным рецептам
+              li Не добавляем разрыхлителей и консервантов
+            p Кондитерская-мастерская &laquo;Белый слон&raquo; была основана в&nbsp;1997&nbsp;году. На&nbsp;протяжении двадцати лет компания производит и&nbsp;поставляет в&nbsp;торговые точки широкий ассортимент тортов, пирожных, пирогов. Кроме этого, кондитерская-мастерская &laquo;Белый слон&raquo; изготавливает эксклюзивные торты на&nbsp;заказ.
+            p В&nbsp;2016 году в&nbsp;компании произошли значительные изменения: площадь производственных помещений увеличилась до&nbsp;3000&nbsp;м&sup2;, а&nbsp;также была приобретена автоматизированная производственная линия швейцарской фирмы RONDO. С&nbsp;её&nbsp;помощью удалось значительно увеличить объёмы производства существующих кондитерских изделий, а&nbsp;также производить новые виды продукции.
+            dl.about-phone
+              dt.about-phone__title Звонок бесплатный
+              dd.about-phone__number
+                a(href="#") 8 800 550 9050

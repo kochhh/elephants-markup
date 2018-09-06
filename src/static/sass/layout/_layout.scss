@@ -1,0 +1,64 @@
+// Get columns widths
+
+$column-width-lg: get-container-max-width(lg) / $grid-columns - $grid-gutter-width;
+$column-width-xl: get-container-max-width(xl) / $grid-columns - $grid-gutter-width;
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 14px;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+  }
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  @include media-breakpoint-down(xs) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.background {
+  @include fixed(0, 0, 0, 0);
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.layout-grid {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 1100;
+  @include make-container();
+  @include make-container-max-widths();
+
+  .row {
+    &,
+    & div {
+      height: 100%;
+    }
+
+    > div > div {
+      background-color: rgba(pink, 0.2);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.page-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.85em;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5rem;
+  }
+}

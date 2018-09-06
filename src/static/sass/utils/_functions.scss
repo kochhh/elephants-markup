@@ -1,0 +1,11 @@
+@function get-container-max-width($key) {
+  @return map-get($container-max-widths, $key);
+}
+
+@function rem($size) {
+  @return ($size/16)+rem;
+}
+
+@function tint($color, $percentage) {
+  @return mix(#ffffff, $color, $percentage);
+}
