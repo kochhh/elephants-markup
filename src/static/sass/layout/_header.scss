@@ -123,8 +123,14 @@
       color: #fff;
 
       &:hover {
-        color: #fff;
+        color: $link-hover-color;
         text-decoration: none;
+
+        .navbar-item__icon {
+          .icon {
+            fill: $link-hover-color;
+          }
+        }
       }
     }
   }
@@ -135,6 +141,7 @@
 
     .icon {
       fill: $body-color;
+      transition: fill 0.15s ease-in-out;
 
       @include media-breakpoint-up(lg) {
         fill: #fff;

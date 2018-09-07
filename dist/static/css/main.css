@@ -1576,6 +1576,12 @@ input[type="button"].btn-block {
     color: inherit;
     border-color: #dee2e6; } }
 
+/*
+* @preserve brand-colors 2.0.1
+* http://reimertz.github.io/brand-colors
+* (c) 2017 Pierre Reimertz
+* may be freely distributed under the MIT license.
+*/
 html,
 body {
   height: 100%; }
@@ -1605,6 +1611,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1; }
+  .background::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.27);
+    content: '';
+    z-index: -1; }
   @media (max-width: 991.98px) {
     .background {
       display: none; } }
@@ -1749,13 +1764,16 @@ body {
       .navbar-item__link {
         color: #fff; }
         .navbar-item__link:hover {
-          color: #fff;
-          text-decoration: none; } }
+          color: #ff4c2a;
+          text-decoration: none; }
+          .navbar-item__link:hover .navbar-item__icon .icon {
+            fill: #ff4c2a; } }
   .navbar-item__icon {
     margin-right: 12px;
     position: relative; }
     .navbar-item__icon .icon {
-      fill: #333E50; }
+      fill: #333E50;
+      transition: fill 0.15s ease-in-out; }
       @media (min-width: 992px) {
         .navbar-item__icon .icon {
           fill: #fff; } }
@@ -1835,12 +1853,20 @@ body {
     .social {
       margin-bottom: 0; } }
   .social__link {
-    margin: 0 1.5rem; }
+    width: 1.375rem;
+    height: 1.375rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 1.125rem; }
     @media (min-width: 992px) {
       .social__link {
-        margin: 0 0 0 1.875rem; } }
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 0 0 1.25rem; } }
     .social__link .icon {
-      fill: #333E50; }
+      fill: #333E50;
+      transition: fill 0.15s ease-in-out; }
       @media (min-width: 992px) {
         .social__link .icon {
           fill: #fff; } }
@@ -1853,6 +1879,12 @@ body {
       .social__link .icon-instagram {
         width: 19px;
         height: 18px; }
+    .social__link:hover .icon-facebook {
+      fill: #3b5998; }
+    .social__link:hover .icon-twitter {
+      fill: #1da1f2; }
+    .social__link:hover .icon-instagram {
+      fill: #c13584; }
 
 .copyright {
   color: #B3B3B3;
@@ -1867,6 +1899,9 @@ a {
 .page-title {
   font-size: 1.5rem;
   margin-bottom: 0.85em; }
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: 2rem; } }
   @media (min-width: 992px) {
     .page-title {
       font-size: 2.5rem; } }
@@ -1916,6 +1951,10 @@ a {
     height: 50%;
     justify-content: center;
     text-transform: uppercase; }
+    .page-index .side-links__link {
+      color: #fff; }
+      .page-index .side-links__link:hover {
+        color: #ff4c2a; }
     .side-links__link span {
       display: block;
       -webkit-transform: rotate(-90deg);

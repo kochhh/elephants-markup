@@ -26,6 +26,14 @@
     justify-content: center;
     text-transform: uppercase;
 
+    .page-index & {
+      color: #fff;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+
     span {
       display: block;
       transform: rotate(-90deg);

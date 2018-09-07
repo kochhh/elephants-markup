@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
+    "brand-colors": "^2.0.1",
     "flickity": "^2.1.2",
     "fontisto": "^3.0.4",
     "jquery": "^3.3.1",
