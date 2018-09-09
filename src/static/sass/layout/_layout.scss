@@ -30,7 +30,7 @@ body {
 
 .background {
   @include fixed(0, 0, 0, 0);
-  background-position: 50% 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -39,11 +39,12 @@ body {
     @include absolute-all(0);
     background-color: rgba(#000, 0.27);
     content: '';
-    z-index: -1;
   }
 
-  @include media-breakpoint-down(md) {
-    display: none;
+  .page-inner & {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 }
 
@@ -65,7 +66,7 @@ body {
     }
 
     > div > div {
-      background-color: rgba(pink, 0.2);
+      background-color: rgba($primary, 0.15);
     }
   }
 }

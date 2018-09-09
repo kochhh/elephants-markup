@@ -1,29 +1,14 @@
-.header {
-  @include media-breakpoint-down(md) {
-    background-color: #fff;
-  }
-
-  @include media-breakpoint-up(lg) {
-    @include fixed(0, 0, null, 0);
-    left: 50%;
-    margin-left: -(get-container-max-width(lg)/3);
-    max-width: get-container-max-width(lg)/3;
-    transform: translateX(get-container-max-width(lg)/2);
-    z-index: $zindex-fixed;
-  }
-
-  @include media-breakpoint-up(xl) {
-    margin-left: -(get-container-max-width(xl)/3);
-    max-width: get-container-max-width(xl)/3;
-    transform: translateX(get-container-max-width(xl)/2);
-  }
-}
-
 .navbar {
   padding-top: 20px;
   padding-bottom: 20px;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-down(md) {
+    .page-inner & {
+      background-color: #fff;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -53,13 +38,13 @@
 }
 
 .navbar-toggler-bar {
-  background-color: $body-color;
+  background-color: #fff;
   border-radius: 1.5px;
   height: 3px;
   left: -2px;
   position: absolute;
   top: 10px;
-  transition: $transition-base;
+  @include transition($transition-base);
   transform-origin: 50% 50%;
   width: 32px;
 
@@ -99,38 +84,67 @@
       width: 25px;
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .page-inner & {
+      background-color: $body-color;
+    }
+  }
 }
 
 .navbar-side {
   align-items: center;
   display: flex;
-  margin-left: auto;
+
+  &--left {
+    margin-right: auto;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+      .page-inner & {
+        display: none;
+      }
+    }
+  }
+
+  &--right {
+    margin-left: auto;
+  }
 }
 
 .navbar-item {
   font-weight: 500;
-  margin-left: 28px;
 
-  @include media-breakpoint-up(lg) {
-    margin-left: 50px;
+  + .navbar-item {
+    margin-left: 28px;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 50px;
+    }
   }
 
   &__link {
     align-items: center;
+    color: #fff;
     display: flex;
 
-    @include media-breakpoint-up(lg) {
-      color: #fff;
+    &:hover {
+      color: $link-color !important;
+      text-decoration: none;
 
-      &:hover {
-        color: $link-hover-color;
-        text-decoration: none;
-
-        .navbar-item__icon {
-          .icon {
-            fill: $link-hover-color;
-          }
+      .navbar-item__icon {
+        .icon {
+          fill: $link-color !important;
         }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .page-inner & {
+        color: $body-color;
       }
     }
   }
@@ -140,11 +154,13 @@
     position: relative;
 
     .icon {
-      fill: $body-color;
-      transition: fill 0.15s ease-in-out;
+      fill: #fff;
+      @include transition(fill 0.15s ease-in-out);
 
-      @include media-breakpoint-up(lg) {
-        fill: #fff;
+      @include media-breakpoint-down(md) {
+        .page-inner & {
+          fill: $body-color;
+        }
       }
 
       &.icon-basket {
@@ -153,6 +169,10 @@
 
       &.icon-login {
         @include size(27px, 25px);
+      }
+
+      &.icon-search {
+        @include size(25px, 23px);
       }
     }
   }
@@ -180,6 +200,7 @@
 }
 
 .navbar-collapse {
+  background-color: #fff;
   text-align: center;
 }
 

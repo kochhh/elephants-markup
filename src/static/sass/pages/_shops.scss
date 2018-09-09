@@ -1,0 +1,84 @@
+.page-shops {
+  .header,
+  .footer {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
+
+.shops-map {
+  $offset: $grid-gutter-width*2 + $column-width-lg*2;
+  bottom: 0;
+  left: calc(50% + #{$offset});
+  // left: 50%;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xl) {
+    $offset: $grid-gutter-width*2 + $column-width-xl*2;
+    left: calc(50% + #{$offset});
+  }
+
+  &::after {
+    @include absolute-all(0);
+    background-color: rgba(#000, 0.1);
+    content: '';
+    z-index: 401;
+  }
+
+  .leaflet-marker-icon {
+    margin-top: -73px !important;
+  }
+}
+
+.main {
+  // display: none;
+}
+
+.shops-list {
+  @include list-unstyled;
+  margin-bottom: 0;
+
+  &__item {
+    font-size: rem(15);
+    padding: rem(30) 0;
+
+    + .shops-list__item {
+      border-top: 1px solid #ECE7E7;
+    }
+
+    &:first-child {
+      padding-top: rem(12);
+    }
+
+    &:last-child {
+      padding-bottom: rem(12);
+    }
+  }
+
+  &__inner {
+    padding-left: rem(36);
+    position: relative;
+  }
+
+  &__marker {
+    @include size(19px, 26px);
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  &__title {
+    margin-bottom: 1em;
+  }
+
+  &__descr {
+    color: #B3B3B3;
+  }
+}

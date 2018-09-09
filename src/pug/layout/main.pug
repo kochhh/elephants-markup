@@ -4,32 +4,37 @@ block variables
 doctype html
 |
 |
-<html class="no-js" lang="en">
+<html class="no-js" lang="ru">
 head
   meta(charset="utf-8")
   meta(http-equiv="X-UA-Compatible", content="IE=edge")
-  title #{title}
+  title= typeof title !== "undefined" ? title + " — " + siteTitle : siteTitle
   meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
   |
   | <!-- inject:head:html -->
   | <!-- endinject -->
   link(href="static/css/main.css" rel="stylesheet")
   script(src="static/js/modernizr-custom.js")
+  block head-scripts
 body(class=pageClass)
   block background
   include ../modules/header
-  include ../modules/navigation
+  block side-links
+  block nav-links
   main.main
     block content
   include ../modules/footer
+  include ../modules/catalog-nav
   .layout-grid
     .row
       - var n = 1
       while n < 13
+        - n++
         .col-1
-          div= n++
+          div
   script(src="static/js/libs.js")
   script(src="static/js/main.js")
+  block scripts
 |
 |
 </html>

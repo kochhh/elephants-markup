@@ -1,0 +1,94 @@
+.section {
+  background-color: $body-bg;
+}
+
+.section-intro {
+  background-color: transparent;
+  height: 100vh;
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-top: 10vh;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      padding-bottom: 6vh;
+    }
+  }
+}
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6vh;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 10.5vh;
+  }
+
+  &__link {
+    @include size(33.5vh, 33.5vh);
+    background-image: url('../img/general/logo.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    text-indent: -9999px;
+
+    @include media-breakpoint-up(lg) {
+      @include size(300px, 304px);
+    }
+  }
+}
+
+.main-menu {
+  @include list-unstyled;
+  margin-bottom: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
+
+  &__item {
+    font-family: $headings-font-family;
+    font-size: 3.7vh;
+    margin-bottom: 3.2vh;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem(26);
+      margin-right: rem(56);
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: $body-color;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .page-index .main & {
+    @include media-breakpoint-up(lg) {
+      justify-content: center;
+
+      &__item {
+        margin: 0 rem(34);
+      }
+    }
+
+    &__link {
+      color: #fff;
+  
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}

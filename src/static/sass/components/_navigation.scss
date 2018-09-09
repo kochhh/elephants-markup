@@ -30,7 +30,7 @@
       color: #fff;
 
       &:hover {
-        color: $link-hover-color;
+        color: $link-color;
       }
     }
 
@@ -48,7 +48,9 @@
   }
 
   &__link {
+    align-items: center;
     color: #fff;
+    display: flex;
     font-family: $headings-font-family;
     font-size: rem(24);
     position: fixed;
@@ -56,8 +58,8 @@
     transform: translateY(-50%);
     z-index: $zindex-fixed;
 
-    @include media-breakpoint-up(xl) {
-      font-size: rem(30);
+    &:hover {
+      color: $link-color;
     }
 
     &::before {
@@ -74,7 +76,7 @@
       }
     }
 
-    &:first-child {
+    &--left {
       left: 0;
       padding-left: rem(36);
 
@@ -91,12 +93,12 @@
         color: $body-color;
 
         &:hover {
-          color: $link-hover-color;
+          color: $link-color;
         }
       }
     }
 
-    &:last-child {
+    &--right {
       right: 0;
       padding-right: rem(36);
 
@@ -108,6 +110,15 @@
         border-right: none;
         right: 0;
       }
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: rem(30);
+    }
+
+    .icon-arrow {
+      @include size(76px, 24px);
+      fill: $body-color;
     }
   }
 }

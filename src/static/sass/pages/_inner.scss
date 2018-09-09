@@ -1,42 +1,17 @@
 .page-inner {
   .main {
-    @include media-breakpoint-down(md) {
-      position: relative;
-
-      &::after {
-        @include size(212px, 225px);
-        background-image: url('../img/general/content-decor.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 320px;
-        z-index: -1;
-      }
-    }
+    background-color: $body-bg;
+    position: relative;
 
     @include media-breakpoint-up(lg) {
-      @include fixed(0, 0, 0, 0);
-      z-index: 10;
-
-      &::before {
-        background-color: $body-bg;
-        bottom: 0;
-        content: '';
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 50%;
-        z-index: -1;
-      }
+      @include fixed(0, 50%, 0, 0);
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
 
 .content-container,
-.content-row,
-.content-col,
 .content-wrapper,
 .content {
   @include media-breakpoint-up(lg) {
@@ -44,44 +19,79 @@
   }
 }
 
-.content-wrapper {
+.content-container {
   @include media-breakpoint-up(lg) {
-    background-color: $body-bg;
-    position: relative;
-    z-index: 1;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    width: get-container-max-width(lg)/2;
+  }
 
-    &::before {
-      @include size(462px, 490px);
-      background-image: url('../img/general/content-decor.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      bottom: 0;
-      content: '';
-      position: absolute;
-      right: 0;
-      z-index: -1;
-    }
+  @include media-breakpoint-up(xl) {
+    width: get-container-max-width(xl)/2;
+  }
+}
+
+.content-wrapper {
+  background-color: $body-bg;
+  position: relative;
+  z-index: 1;
+
+  @include media-breakpoint-up(lg) {
+    margin-right: -($grid-gutter-width*2 + $column-width-lg*2);
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-right: -($grid-gutter-width*2 + $column-width-xl*2);
+  }
+}
+
+.about-decor {
+  @include size(212px, 225px);
+  background-image: url('../img/general/content-decor.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 320px;
+  z-index: -1;
+
+  @include media-breakpoint-up(sm) {
+    right: $grid-gutter-width/2;
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include size(462px, 490px);
+    bottom: 0;
+    right: 0;
+    top: auto;
   }
 }
 
 .content {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     overflow-y: auto;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 12vh;
+    padding-bottom: 6vh;
+  }
+
+  @include media-breakpoint-up(lg) {
     padding-left: $column-width-lg*2 + $grid-gutter-width;
-    padding-right: $column-width-lg + $column-width-lg/2 + $grid-gutter-width;
+    padding-right: $column-width-lg*1.5 + $grid-gutter-width;
   }
 
   @include media-breakpoint-up(xl) {
     padding-left: $column-width-xl*2 + $grid-gutter-width;
-    padding-right: $column-width-xl + $column-width-xl/2 + $grid-gutter-width;
+    padding-right: $column-width-xl*1.5 + $grid-gutter-width;
   }
 }
 
@@ -106,19 +116,23 @@
 }
 
 .about-phone {
-  margin-top: 40px;
+  margin-top: rem(40);
   margin-bottom: 0;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
 
   &__title {
     color: $primary;
-    font-size: rem(19);
+    font-size: 19px;
     font-weight: 400;
     line-height: 1.3;
   }
 
   &__number {
     font-family: $headings-font-family;
-    font-size: rem(24);
+    font-size: 24px;
     margin-bottom: 0;
 
     a {

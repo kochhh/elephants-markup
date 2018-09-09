@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="ru">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>О кондитерской — Белые слоны</title>
+  <title>О кондитерской — Кондитерская «Белые слоны»</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- inject:head:html -->
   <link rel="icon" type="image/png" sizes="32x32" href="static/i/general/favicons/favicon-32x32.png">
@@ -14,26 +14,32 @@
   <script src="static/js/modernizr-custom.js"></script>
 </head>
 <body class="page-inner">
-  <div class="background" style="background-image: url('./static/img/content/bg-dark.jpg');"></div>
-  <header class="header">
-    <div class="navbar">
+  <div class="background" style="background-image: url(./static/img/content/bg-dark.jpg);"></div>
+  <header class="header fixed-top">
+    <nav class="navbar">
       <div class="container">
         <div class="navbar-container">
-          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span></button>
-          <div class="navbar-side">
-            <div class="navbar-item"><a class="navbar-item__link" href="#"><span class="navbar-item__icon">
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Развернуть меню" title="Развернуть меню"><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span></button>
+          <div class="navbar-side navbar-side--left">
+            <div class="navbar-item"><a class="navbar-item__link" href="#" title="Поиск"><span class="navbar-item__icon">
+                  <svg class="icon icon-search">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#search"></use>
+                  </svg></span><span class="navbar-item__text">Поиск</span></a></div>
+          </div>
+          <div class="navbar-side navbar-side--right">
+            <div class="navbar-item"><a class="navbar-item__link" href="#" title="Корзина"><span class="navbar-item__icon">
                   <svg class="icon icon-basket">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                   </svg>
                   <div class="navbar-item__count">1</div></span><span class="navbar-item__text">2 300 ₽</span></a></div>
-            <div class="navbar-item"><a class="navbar-item__link" href="#"><span class="navbar-item__icon">
+            <div class="navbar-item"><a class="navbar-item__link" href="#" title="Войти"><span class="navbar-item__icon">
                   <svg class="icon icon-login">
                     <use xlink:href="static/img/svg/symbol/sprite.svg#login"></use>
                   </svg></span><span class="navbar-item__text">Войти</span></a></div>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div class="navbar-collapse collapse" id="navbarNav">
       <div class="container">
         <ul class="navbar-nav">
@@ -46,86 +52,136 @@
       </div>
     </div>
   </header>
-  <div class="side-links"><a class="side-links__link" href="contacts.html"><span>Контакты</span></a><a class="side-links__link" href="catalog.html"><span>Каталог</span></a></div>
-  <div class="nav-links"><a class="nav-links__link" href="shops.html">Где купить</a><a class="nav-links__link" href="index.html">Главная</a></div>
+  <div class="side-links"><a class="side-links__link" href="catalog.html" data-toggle="modal" data-target="#catalog-nav" title="Каталог"><span>Каталог</span></a><a class="side-links__link" href="contacts.html" title="Контакты"><span>Контакты</span></a></div>
+  <div class="nav-links"><a class="nav-links__link nav-links__link--left" href="shops.html" title="Где купить">Где купить</a><a class="nav-links__link nav-links__link--right" href="index.html" title="Главная">Главная</a></div>
   <main class="main">
-    <div class="container content-container">
-      <div class="row content-row">
-        <div class="col-lg-8 content-col">
-          <div class="content-wrapper">
-            <div class="content">
-              <h1 class="page-title">О кондитерской</h1>
-              <ul class="text-list">
-                <li>Берём только свежие продукты местных фермеров</li>
-                <li>Готовим по собственным рецептам</li>
-                <li>Не добавляем разрыхлителей и консервантов</li>
-              </ul>
-              <p>Кондитерская-мастерская &laquo;Белый слон&raquo; была основана в&nbsp;1997&nbsp;году. На&nbsp;протяжении двадцати лет компания производит и&nbsp;поставляет в&nbsp;торговые точки широкий ассортимент тортов, пирожных, пирогов. Кроме этого, кондитерская-мастерская &laquo;Белый слон&raquo; изготавливает эксклюзивные торты на&nbsp;заказ.</p>
-              <p>В&nbsp;2016 году в&nbsp;компании произошли значительные изменения: площадь производственных помещений увеличилась до&nbsp;3000&nbsp;м&sup2;, а&nbsp;также была приобретена автоматизированная производственная линия швейцарской фирмы RONDO. С&nbsp;её&nbsp;помощью удалось значительно увеличить объёмы производства существующих кондитерских изделий, а&nbsp;также производить новые виды продукции.</p>
-              <dl class="about-phone">
-                <dt class="about-phone__title">Звонок бесплатный</dt>
-                <dd class="about-phone__number"><a href="#">8 800 550 9050</a></dd>
-              </dl>
-            </div>
-          </div>
+    <div class="content-container container">
+      <div class="content-wrapper">
+        <div class="about-decor"></div>
+        <div class="content">
+          <h1 class="h1">О кондитерской</h1>
+          <ul class="text-list">
+            <li>Берём только свежие продукты местных фермеров</li>
+            <li>Готовим по собственным рецептам</li>
+            <li>Не добавляем разрыхлителей и консервантов</li>
+          </ul>
+          <p>Кондитерская-мастерская &laquo;Белый слон&raquo; была основана в&nbsp;1997&nbsp;году. На&nbsp;протяжении двадцати лет компания производит и&nbsp;поставляет в&nbsp;торговые точки широкий ассортимент тортов, пирожных, пирогов. Кроме этого, кондитерская-мастерская &laquo;Белый слон&raquo; изготавливает эксклюзивные торты на&nbsp;заказ.</p>
+          <p>В&nbsp;2016 году в&nbsp;компании произошли значительные изменения: площадь производственных помещений увеличилась до&nbsp;3000&nbsp;м&sup2;, а&nbsp;также была приобретена автоматизированная производственная линия швейцарской фирмы RONDO. С&nbsp;её&nbsp;помощью удалось значительно увеличить объёмы производства существующих кондитерских изделий, а&nbsp;также производить новые виды продукции.</p>
+          <dl class="about-phone">
+            <dt class="about-phone__title">Звонок бесплатный</dt>
+            <dd class="about-phone__number"><a href="#">8 800 550 9050</a></dd>
+          </dl>
         </div>
       </div>
     </div>
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer-container">
-        <div class="social"><a class="social__link" href="#" title="Facebook">
-            <svg class="icon icon-facebook">
-              <use xlink:href="static/img/svg/symbol/sprite.svg#facebook"></use>
-            </svg></a><a class="social__link" href="#" title="Twitter">
-            <svg class="icon icon-twitter">
-              <use xlink:href="static/img/svg/symbol/sprite.svg#twitter"></use>
-            </svg></a><a class="social__link" href="#" title="Instagram">
-            <svg class="icon icon-instagram">
-              <use xlink:href="static/img/svg/symbol/sprite.svg#instagram"></use>
-            </svg></a></div>
-        <div class="copyright">© Кондитерская «Белые слоны», 2018</div>
+      <div class="footer-container"><a class="foot-logo" href="/" title="Кондитерская «Белые слоны»">Кондитерская «Белые слоны»</a>
+        <ul class="foot-menu">
+          <li class="foot-menu__item"><a class="foot-menu__link" href="catalog.html">Каталог</a></li>
+          <li class="foot-menu__item"><a class="foot-menu__link" href="delivery.html">Оплата и доставка</a></li>
+          <li class="foot-menu__item"><a class="foot-menu__link" href="reviews.html">Отзывы</a></li>
+          <li class="foot-menu__item"><a class="foot-menu__link" href="promotions.html">Акции</a></li>
+          <li class="foot-menu__item"><a class="foot-menu__link" href="shops.html">Где купить</a></li>
+        </ul>
+        <div class="foot-content">
+          <div class="social"><a class="social__link" href="#" title="Facebook">
+              <svg class="icon icon-facebook">
+                <use xlink:href="static/img/svg/symbol/sprite.svg#facebook"></use>
+              </svg></a><a class="social__link" href="#" title="Twitter">
+              <svg class="icon icon-twitter">
+                <use xlink:href="static/img/svg/symbol/sprite.svg#twitter"></use>
+              </svg></a><a class="social__link" href="#" title="Instagram">
+              <svg class="icon icon-instagram">
+                <use xlink:href="static/img/svg/symbol/sprite.svg#instagram"></use>
+              </svg></a></div>
+          <div class="copyright">© Кондитерская «Белые слоны», 2018</div>
+        </div>
       </div>
     </div>
   </footer>
+  <div class="modal catalog-nav fade" id="catalog-nav" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <svg class="icon icon-close">
+            <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+          </svg>Закрыть
+        </button>
+        <div class="container">
+          <div class="catalog-nav-container">
+            <div class="catalog-nav-body">
+              <div class="h1">Каталог</div>
+              <ul class="main-menu">
+                <li class="main-menu__item"><a class="main-menu__link" href="cakes.html">Торты</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="pies.html">Пироги</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="desserts.html">Десерты</a></li>
+                <li class="main-menu__item"><a class="main-menu__link" href="bakery.html">Выпечка</a></li>
+              </ul>
+            </div>
+            <div class="catalog-nav-footer">
+              <ul class="foot-menu">
+                <li class="foot-menu__item"><a class="foot-menu__link" href="catalog.html">Каталог</a></li>
+                <li class="foot-menu__item"><a class="foot-menu__link" href="delivery.html">Оплата и доставка</a></li>
+                <li class="foot-menu__item"><a class="foot-menu__link" href="reviews.html">Отзывы</a></li>
+                <li class="foot-menu__item"><a class="foot-menu__link" href="promotions.html">Акции</a></li>
+                <li class="foot-menu__item"><a class="foot-menu__link" href="shops.html">Где купить</a></li>
+              </ul>
+              <div class="navbar-side navbar-side--right">
+                <div class="navbar-item"><a class="navbar-item__link" href="#"><span class="navbar-item__icon">
+                      <svg class="icon icon-basket">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
+                      </svg>
+                      <div class="navbar-item__count">1</div></span><span class="navbar-item__text">2 300 ₽</span></a></div>
+                <div class="navbar-item"><a class="navbar-item__link" href="#"><span class="navbar-item__icon">
+                      <svg class="icon icon-login">
+                        <use xlink:href="static/img/svg/symbol/sprite.svg#login"></use>
+                      </svg></span><span class="navbar-item__text">Войти</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="layout-grid">
     <div class="row">
       <div class="col-1">
-        <div>1</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>2</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>3</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>4</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>5</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>6</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>7</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>8</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>9</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>10</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>11</div>
+        <div></div>
       </div>
       <div class="col-1">
-        <div>12</div>
+        <div></div>
       </div>
     </div>
   </div>

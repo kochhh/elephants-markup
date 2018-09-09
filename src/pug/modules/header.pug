@@ -1,22 +1,28 @@
-header.header
-  .navbar
+header.header.fixed-top
+  nav.navbar
     .container
       .navbar-container
-        button.navbar-toggler.collapsed(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+        button.navbar-toggler.collapsed(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Развернуть меню" title="Развернуть меню")
           span.navbar-toggler-bar
           span.navbar-toggler-bar
           span.navbar-toggler-bar
-        .navbar-side
+        .navbar-side.navbar-side--left
           .navbar-item
-            a.navbar-item__link(href="#")
+            a.navbar-item__link(href="#" title="Поиск")
               span.navbar-item__icon
-                +icon('basket')
+                +icon("search")
+              span.navbar-item__text Поиск
+        .navbar-side.navbar-side--right
+          .navbar-item
+            a.navbar-item__link(href="#" title="Корзина")
+              span.navbar-item__icon
+                +icon("basket")
                 .navbar-item__count 1
               span.navbar-item__text 2 300 ₽
           .navbar-item
-            a.navbar-item__link(href="#")
+            a.navbar-item__link(href="#" title="Войти")
               span.navbar-item__icon
-                +icon('login')
+                +icon("login")
               span.navbar-item__text Войти
   .navbar-collapse.collapse#navbarNav
     .container

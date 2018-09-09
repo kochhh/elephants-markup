@@ -1,0 +1,33 @@
+.modal.catalog-nav.fade#catalog-nav(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog(role="document")
+    .modal-content
+      button.close(type="button" data-dismiss="modal" aria-label="Close")
+        +icon("close")
+        | Закрыть
+      .container
+        .catalog-nav-container
+          .catalog-nav-body
+            .h1 Каталог
+            ul.main-menu
+              - menu = [{ "name": "Торты", "link": "cakes.html" }, { "name": "Пироги", "link": "pies.html" }, { "name": "Десерты", "link": "desserts.html" }, { "name": "Выпечка", "link": "bakery.html" }]
+              each item in menu
+                li.main-menu__item
+                  a.main-menu__link(href=item.link)= item.name
+          .catalog-nav-footer
+            ul.foot-menu
+              - menu = [{ "name": "Каталог", "link": "catalog.html" }, { "name": "Оплата и доставка", "link": "delivery.html" }, { "name": "Отзывы", "link": "reviews.html" }, { "name": "Акции", "link": "promotions.html" }, { "name": "Где купить", "link": "shops.html" }]
+              each item in menu
+                li.foot-menu__item
+                  a.foot-menu__link(href=item.link)= item.name
+            .navbar-side.navbar-side--right
+              .navbar-item
+                a.navbar-item__link(href="#")
+                  span.navbar-item__icon
+                    +icon("basket")
+                    .navbar-item__count 1
+                  span.navbar-item__text 2 300 ₽
+              .navbar-item
+                a.navbar-item__link(href="#")
+                  span.navbar-item__icon
+                    +icon("login")
+                  span.navbar-item__text Войти

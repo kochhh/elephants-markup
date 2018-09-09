@@ -1,12 +1,31 @@
 extends ../layout/main
 
 block variables
-  - var title = 'Белые слоны'
-  - var pageClass = 'page-index'
+  - var siteTitle = "Кондитерская «Белые слоны»"
+  - var pageClass = "page-index"
 
 block background
-  .background(style="background-image: url('./static/img/content/bg-light.jpg');")
+  .background(style="background-image: url(./static/img/content/bg-dark.jpg);")
+
+block side-links
+  .side-links
+    a.side-links__link(href="catalog.html" data-toggle="modal" data-target="#catalog-nav" title="Каталог")
+      span Каталог
+    a.side-links__link(href="contacts.html" title="Контакты")
+      span Контакты
+
+block nav-links
+  .nav-links
+    a.nav-links__link.nav-links__link--left(href="about.html" title="О кондитерской") О кондитерской
+    a.nav-links__link.nav-links__link--right(href="shops.html" title="Где купить") Где купить
 
 block content
-  .container
-    | Index page
+  section.section.section-intro
+    .container
+      h1.site-logo
+        a.site-logo__link(href="/" title=siteTitle)= siteTitle
+      ul.main-menu
+        - menu = [{ "name": "Торты", "link": "cakes.html" }, { "name": "Пироги", "link": "pies.html" }, { "name": "Десерты", "link": "desserts.html" }, { "name": "Выпечка", "link": "bakery.html" }]
+        each item in menu
+          li.main-menu__item
+            a.main-menu__link(href=item.link)= item.name
