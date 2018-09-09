@@ -20,8 +20,10 @@ module.exports = function() {
 				'./node_modules/bootstrap/dist/js/bootstrap.bundle.js',
 				'./node_modules/flickity/dist/flickity.pkgd.js'
 			])
-			.pipe($.glp.concat('libs.min.js'))
+			.pipe($.glp.concat('libs.js'))
+			.pipe($.gulp.dest('./dist/static/js/'))
 			.pipe($.glp.uglify())
+			.pipe($.glp.rename('libs.min.js'))
 			.pipe($.gulp.dest('./dist/static/js/'));
 	});
 
