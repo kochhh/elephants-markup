@@ -8,10 +8,8 @@
 }
 
 .shops-map {
-  $offset: $grid-gutter-width*2 + $column-width-lg*2;
   bottom: 0;
-  left: calc(50% + #{$offset});
-  // left: 50%;
+  left: 50%;
   position: fixed;
   right: 0;
   top: 0;
@@ -20,9 +18,12 @@
     display: none;
   }
 
+  @include media-breakpoint-up(lg) {
+    margin-left: $grid-gutter-width*1.5 + $column-width-lg*2;
+  }
+
   @include media-breakpoint-up(xl) {
-    $offset: $grid-gutter-width*2 + $column-width-xl*2;
-    left: calc(50% + #{$offset});
+    margin-left: $grid-gutter-width*1.5 + $column-width-xl*2;
   }
 
   &::after {

@@ -39,6 +39,10 @@
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -60,6 +64,10 @@
 
     &:hover {
       color: $link-color;
+
+      .icon-arrow {
+        fill: $link-color;
+      }
     }
 
     &::before {
@@ -119,6 +127,7 @@
     .icon-arrow {
       @include size(76px, 24px);
       fill: $body-color;
+      @include transition(fill 0.15s ease-in-out);
     }
   }
 }

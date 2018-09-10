@@ -19,7 +19,7 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-container">
-          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Развернуть меню" title="Развернуть меню"><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span></button>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="modal" data-target="#catalog-nav" title="Развернуть меню"><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span></button>
           <div class="navbar-side navbar-side--left">
             <div class="navbar-item"><a class="navbar-item__link" href="#" title="Поиск"><span class="navbar-item__icon">
                   <svg class="icon icon-search">
@@ -40,17 +40,6 @@
         </div>
       </div>
     </nav>
-    <div class="navbar-collapse collapse" id="navbarNav">
-      <div class="container">
-        <ul class="navbar-nav">
-          <div class="nav-item"><a class="nav-link" href="#">Торты</a></div>
-          <div class="nav-item active"><a class="nav-link" href="#">Пироги <span class="sr-only">(current)</span></a></div>
-          <div class="nav-item"><a class="nav-link" href="#">Десерты</a></div>
-          <div class="nav-item"><a class="nav-link" href="#">Выпечка</a></div>
-          <div class="nav-item"><a class="nav-link" href="#">Пирожки</a></div>
-        </ul>
-      </div>
-    </div>
   </header>
   <div class="side-links"><a class="side-links__link" href="catalog.html" data-toggle="modal" data-target="#catalog-nav" title="Каталог"><span>Каталог</span></a><a class="side-links__link" href="contacts.html" title="Контакты"><span>Контакты</span></a></div>
   <div class="nav-links"><a class="nav-links__link nav-links__link--left" href="shops.html" title="Где купить">Где купить</a><a class="nav-links__link nav-links__link--right" href="index.html" title="Главная">Главная</a></div>
@@ -77,7 +66,7 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <div class="footer-container"><a class="foot-logo" href="/" title="Кондитерская «Белые слоны»">Кондитерская «Белые слоны»</a>
+      <div class="footer-container"><a class="foot-logo" href="index.html" title="Кондитерская «Белые слоны»">Кондитерская «Белые слоны»</a>
         <ul class="foot-menu">
           <li class="foot-menu__item"><a class="foot-menu__link" href="catalog.html">Каталог</a></li>
           <li class="foot-menu__item"><a class="foot-menu__link" href="delivery.html">Оплата и доставка</a></li>
@@ -104,13 +93,13 @@
   <div class="modal catalog-nav fade" id="catalog-nav" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <svg class="icon icon-close">
-            <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
-          </svg>Закрыть
-        </button>
         <div class="container">
           <div class="catalog-nav-container">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <svg class="icon icon-close">
+                <use xlink:href="static/img/svg/symbol/sprite.svg#close"></use>
+              </svg><span class="close-label">Закрыть</span>
+            </button>
             <div class="catalog-nav-body">
               <div class="h1">Каталог</div>
               <ul class="main-menu">
@@ -120,7 +109,7 @@
                 <li class="main-menu__item"><a class="main-menu__link" href="bakery.html">Выпечка</a></li>
               </ul>
             </div>
-            <div class="catalog-nav-footer">
+            <div class="catalog-nav-footer"><a class="foot-logo" href="index.html" title="Кондитерская «Белые слоны»">Кондитерская «Белые слоны»</a>
               <ul class="foot-menu">
                 <li class="foot-menu__item"><a class="foot-menu__link" href="catalog.html">Каталог</a></li>
                 <li class="foot-menu__item"><a class="foot-menu__link" href="delivery.html">Оплата и доставка</a></li>
@@ -129,7 +118,17 @@
                 <li class="foot-menu__item"><a class="foot-menu__link" href="shops.html">Где купить</a></li>
               </ul>
               <div class="navbar-side navbar-side--right">
-                <div class="navbar-item"><a class="navbar-item__link" href="#"><span class="navbar-item__icon">
+                <div class="social"><a class="social__link" href="#" title="Facebook">
+                    <svg class="icon icon-facebook">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#facebook"></use>
+                    </svg></a><a class="social__link" href="#" title="Twitter">
+                    <svg class="icon icon-twitter">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#twitter"></use>
+                    </svg></a><a class="social__link" href="#" title="Instagram">
+                    <svg class="icon icon-instagram">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#instagram"></use>
+                    </svg></a></div>
+                <div class="navbar-item navbar-item--basket"><a class="navbar-item__link" href="#"><span class="navbar-item__icon">
                       <svg class="icon icon-basket">
                         <use xlink:href="static/img/svg/symbol/sprite.svg#basket"></use>
                       </svg>

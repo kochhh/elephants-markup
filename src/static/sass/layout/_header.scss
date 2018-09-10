@@ -150,8 +150,17 @@
   }
 
   &__icon {
-    margin-right: 12px;
     position: relative;
+
+    @include media-breakpoint-down(md) {
+      .catalog-nav-footer & {
+        margin-right: 12px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-right: 12px;
+    }
 
     .icon {
       fill: #fff;
@@ -194,17 +203,9 @@
 
   &__text {
     @include media-breakpoint-down(md) {
-      display: none;
+      .header & {
+        display: none;
+      }
     }
   }
-}
-
-.navbar-collapse {
-  background-color: #fff;
-  text-align: center;
-}
-
-.navbar-nav {
-  @include list-unstyled;
-  margin-bottom: 0;
 }

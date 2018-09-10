@@ -1,11 +1,11 @@
 .modal.catalog-nav.fade#catalog-nav(tabindex="-1" role="dialog" aria-hidden="true")
   .modal-dialog(role="document")
     .modal-content
-      button.close(type="button" data-dismiss="modal" aria-label="Close")
-        +icon("close")
-        | Закрыть
       .container
         .catalog-nav-container
+          button.close(type="button" data-dismiss="modal" aria-label="Close")
+            +icon("close")
+            span.close-label Закрыть
           .catalog-nav-body
             .h1 Каталог
             ul.main-menu
@@ -14,13 +14,21 @@
                 li.main-menu__item
                   a.main-menu__link(href=item.link)= item.name
           .catalog-nav-footer
+            a.foot-logo(href="index.html" title=siteTitle)= siteTitle
             ul.foot-menu
               - menu = [{ "name": "Каталог", "link": "catalog.html" }, { "name": "Оплата и доставка", "link": "delivery.html" }, { "name": "Отзывы", "link": "reviews.html" }, { "name": "Акции", "link": "promotions.html" }, { "name": "Где купить", "link": "shops.html" }]
               each item in menu
                 li.foot-menu__item
                   a.foot-menu__link(href=item.link)= item.name
             .navbar-side.navbar-side--right
-              .navbar-item
+              .social
+                a.social__link(href="#" title="Facebook")
+                  +icon("facebook")
+                a.social__link(href="#" title="Twitter")
+                  +icon("twitter")
+                a.social__link(href="#" title="Instagram")
+                  +icon("instagram")
+              .navbar-item.navbar-item--basket
                 a.navbar-item__link(href="#")
                   span.navbar-item__icon
                     +icon("basket")

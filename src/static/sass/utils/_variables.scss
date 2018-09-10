@@ -948,8 +948,8 @@ $modal-backdrop-opacity:            .58;
 
 
 // // Printing
-// $print-page-size:                   a3 !default;
-// $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
+$print-page-size:                   a4;
+$print-body-min-width:              map-get($grid-breakpoints, "lg");
 
 
 // Custom variables

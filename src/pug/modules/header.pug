@@ -2,7 +2,7 @@ header.header.fixed-top
   nav.navbar
     .container
       .navbar-container
-        button.navbar-toggler.collapsed(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Развернуть меню" title="Развернуть меню")
+        button.navbar-toggler.collapsed(type="button" data-toggle="modal" data-target="#catalog-nav" title="Развернуть меню")
           span.navbar-toggler-bar
           span.navbar-toggler-bar
           span.navbar-toggler-bar
@@ -24,18 +24,3 @@ header.header.fixed-top
               span.navbar-item__icon
                 +icon("login")
               span.navbar-item__text Войти
-  .navbar-collapse.collapse#navbarNav
-    .container
-      ul.navbar-nav
-        .nav-item
-          a.nav-link(href="#") Торты
-        .nav-item.active
-          a.nav-link(href="#")
-            | Пироги 
-            span.sr-only (current)
-        .nav-item
-          a.nav-link(href="#") Десерты
-        .nav-item
-          a.nav-link(href="#") Выпечка
-        .nav-item
-          a.nav-link(href="#") Пирожки

@@ -39,7 +39,8 @@
     text-indent: -9999px;
 
     @include media-breakpoint-up(lg) {
-      @include size(300px, 304px);
+      @include size(39.1vh, 39.5vh);
+      max-width: 50vw;
     }
   }
 }
