@@ -100,7 +100,9 @@
     color: $body-color;
 
     @include media-breakpoint-up(lg) {
-      color: #fff;
+      .footer & {
+        color: #fff;
+      }
     }
 
     &:hover {
@@ -182,19 +184,20 @@
     }
 
     &:hover {
-      .icon {
-        &-facebook {
-          fill: $bc-facebook;
-        }
+      transform: scale(1.1);
+      // .icon {
+      //   &-facebook {
+      //     fill: $bc-facebook;
+      //   }
     
-        &-twitter {
-          fill: $bc-twitter;
-        }
+      //   &-twitter {
+      //     fill: $bc-twitter;
+      //   }
     
-        &-instagram {
-          fill: $bc-instagram-4;
-        }
-      }
+      //   &-instagram {
+      //     fill: $bc-instagram-4;
+      //   }
+      // }
     }
   }
 }

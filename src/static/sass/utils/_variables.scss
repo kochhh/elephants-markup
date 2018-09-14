@@ -110,7 +110,7 @@ $theme-colors: map-merge(
 // // Quickly modify global styling by enabling or disabling optional features.
 
 // $enable-caret:              true !default;
-// $enable-rounded:            true !default;
+$enable-rounded:            false;
 // $enable-shadows:            false !default;
 // $enable-gradients:          false !default;
 // $enable-transitions:        true !default;
@@ -174,7 +174,7 @@ $link-hover-decoration:     none;
 // //
 // // Style p element.
 
-$paragraph-margin-bottom:   1.25rem;
+$paragraph-margin-bottom:   0;
 
 
 // // Grid breakpoints
@@ -422,8 +422,8 @@ $headings-color:              inherit;
 // $input-bg:                              $white !default;
 // $input-disabled-bg:                     $gray-200 !default;
 
-// $input-color:                           $gray-700 !default;
-// $input-border-color:                    $gray-400 !default;
+$input-color:                           $body-color;
+$input-border-color:                    #E1E1E1;
 // $input-border-width:                    $input-btn-border-width !default;
 // $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
@@ -432,7 +432,7 @@ $headings-color:              inherit;
 // $input-border-radius-sm:                $border-radius-sm !default;
 
 // $input-focus-bg:                        $input-bg !default;
-// $input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-border-color:              $input-border-color;
 // $input-focus-color:                     $input-color !default;
 // $input-focus-width:                     $input-btn-focus-width !default;
 // $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;

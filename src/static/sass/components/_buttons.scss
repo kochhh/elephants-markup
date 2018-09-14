@@ -1,3 +1,11 @@
 .btn {
-  color: #fff !important;
+  @include button-size(rem(12), rem(16), rem(14), 18px, 0);
+  border: none;
+  font-weight: 700;
+  height: 40px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  color: #fff;
 }

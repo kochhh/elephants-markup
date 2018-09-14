@@ -47,13 +47,13 @@
 // @import "../../../node_modules/bootstrap/scss/utilities/clearfix";
 // @import "../../../node_modules/bootstrap/scss/utilities/display";
 // @import "../../../node_modules/bootstrap/scss/utilities/embed";
-// @import "../../../node_modules/bootstrap/scss/utilities/flex";
+@import "../../../node_modules/bootstrap/scss/utilities/flex";
 // @import "../../../node_modules/bootstrap/scss/utilities/float";
 @import "../../../node_modules/bootstrap/scss/utilities/position";
 @import "../../../node_modules/bootstrap/scss/utilities/screenreaders";
 // @import "../../../node_modules/bootstrap/scss/utilities/shadows";
 // @import "../../../node_modules/bootstrap/scss/utilities/sizing";
-// @import "../../../node_modules/bootstrap/scss/utilities/spacing";
+@import "../../../node_modules/bootstrap/scss/utilities/spacing";
 // @import "../../../node_modules/bootstrap/scss/utilities/text";
 // @import "../../../node_modules/bootstrap/scss/utilities/visibility";
 
@@ -77,10 +77,12 @@
 @import "components/images";
 @import "components/forms";
 @import "components/modals";
-@import "components/navigation";
+@import "components/nav";
 
 // Pages
 
 @import "pages/index";
 @import "pages/inner";
+@import "pages/about";
 @import "pages/shops";
+@import "pages/catalog";

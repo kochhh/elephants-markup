@@ -43,6 +43,7 @@
     "fontisto": "^3.0.4",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
+    "select2": "^4.0.6-rc.1",
     "svg4everybody": "^2.1.9"
   },
   "browserslist": [

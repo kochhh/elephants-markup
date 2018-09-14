@@ -1,3 +1,13 @@
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
 .side-links {
   display: flex;
   flex-direction: column;
@@ -6,7 +16,7 @@
   position: fixed;
   top: 0;
   width: rem(90);
-  z-index: $zindex-fixed;
+  z-index: $zindex-fixed + 2;
 
   @include media-breakpoint-down(md) {
     display: none;
@@ -60,7 +70,7 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    z-index: $zindex-fixed;
+    z-index: $zindex-fixed + 2;
 
     &:hover {
       color: $link-color;
@@ -128,6 +138,61 @@
       @include size(76px, 24px);
       fill: $body-color;
       @include transition(fill 0.15s ease-in-out);
+    }
+  }
+}
+
+.advantages {
+  @include list-unstyled;
+  @include fixed(50%, 50%, null, null);
+  counter-reset: advantages-list;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  transform: translateY(-50%);
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: -(get-container-max-width(lg)/2 - $grid-gutter-width/2);
+    width: $column-width-lg*2 + $grid-gutter-width;
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-right: -(get-container-max-width(xl)/2 - $grid-gutter-width/2);
+    width: $column-width-xl*2 + $grid-gutter-width;
+  }
+
+  &__item {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    font-family: $headings-font-family;
+    font-size: rem(26);
+    height: 24vh;
+    justify-content: center;
+    line-height: $headings-line-height;
+    max-height: 300px;
+    text-align: center;
+  }
+
+  &__span {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      content: counter(advantages-list);
+      counter-increment: advantages-list;
+      font-size: rem(111);
+      left: 50%;
+      opacity: 0.2;
+      position: absolute;
+      top: -0.37em;
+      transform: translateX(-50%);
     }
   }
 }
