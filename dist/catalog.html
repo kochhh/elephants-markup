@@ -18,7 +18,7 @@
   <header class="header fixed-top">
     <nav class="navbar">
       <div class="container">
-        <div class="navbar-container">
+        <div class="navbar-container"><a class="navbar-logo" href="#" title="Кондитерская «Белые слоны»">Кондитерская «Белые слоны»</a>
           <button class="navbar-toggler collapsed" type="button" data-toggle="modal" data-target="#catalog-nav" title="Развернуть меню"><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span><span class="navbar-toggler-bar"></span></button>
           <div class="navbar-side navbar-side--left">
             <div class="navbar-item"><a class="navbar-item__link" href="#" title="Поиск"><span class="navbar-item__icon">
@@ -61,7 +61,14 @@
           </ul>
           <h1 class="h1">Торты</h1>
           <section class="section-content">
-            <div class="categories"><a class="categories-trigger" href="#"><span class="dotted">Все категории</span>
+            <div class="categories">
+              <select class="categories-select-mobile js-select">
+                <option name="Все торты">Все торты</option>
+                <option name="Свадебные">Свадебные</option>
+                <option name="Детские">Детские</option>
+                <option name="Корпоративные">Корпоративные</option>
+                <option name="Праздничные">Праздничные</option>
+              </select><a class="categories-trigger" href="#"><span class="dotted">Все категории</span>
                 <svg class="icon icon-caret caret">
                   <use xlink:href="static/img/svg/symbol/sprite.svg#caret"></use>
                 </svg></a>
@@ -85,8 +92,8 @@
                           <label class="sr-only" for="cake-1-select">Выберите</label>
                           <select class="js-select-dotted" id="cake-1-select">
                             <option name="Медовик" selected>Медовик</option>
-                            <option name="Хуевик">Хуевик</option>
-                            <option name="Маховик">Маховик</option>
+                            <option name="Медовичок">Медовичок</option>
+                            <option name="Медовичок Xs Max 512GB">Медовичок Xs Max 512GB</option>
                           </select>
                         </div>
                         <div class="catalog-card__form-group"><span class="qnt-check-label">Ярусов</span>
@@ -133,8 +140,8 @@
                           <label class="sr-only" for="cake-2-select">Выберите</label>
                           <select class="js-select-dotted" id="cake-2-select">
                             <option name="Варёная сгущёнка и орехи" selected>Варёная сгущёнка и орехи</option>
-                            <option name="Хуй да ничего плюс шиш с маслом">Хуй да ничего плюс шиш с маслом</option>
-                            <option name="И ещё маховик">И ещё маховик</option>
+                            <option name="Козе баян, Кузьме сюртук да шиш с маслом">Козе баян, Кузьме сюртук да шиш с маслом</option>
+                            <option name="Wow">Wow</option>
                           </select>
                         </div>
                         <div class="catalog-card__form-group catalog-card__form-group--price">

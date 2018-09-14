@@ -6,7 +6,7 @@
 
   &.fade {
     .modal-dialog {
-      transform: scale(0.94);
+      transform: scale(0.96);
 
       @include media-breakpoint-up(lg) {
         transform: translate(0, -100%);

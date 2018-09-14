@@ -17,12 +17,6 @@
     }
   }
 
-  .select2-selection__clear {
-    cursor: pointer;
-    float: right;
-    font-weight: bold;
-  }
-
   .select2-selection__placeholder {
     color: #999;
   }
@@ -33,19 +27,6 @@
     bottom: 6.5px;
     position: absolute;
     right: 0;
-  }
-}
-
-&[dir="rtl"] {
-  .select2-selection--single {
-    .select2-selection__clear {
-      float: left;
-    }
-
-    .select2-selection__arrow {
-      left: 1px;
-      right: auto;
-    }
   }
 }
 
@@ -63,19 +44,14 @@
 &.select2-container--open {
   .select2-selection--single {
     .select2-selection__arrow {
-      b {
-        border-color: transparent transparent #888 transparent;
-        border-width: 0 4px 5px 4px;
-      }
+      transform: rotate(-180deg);
     }
   }
 }
 
 &.select2-container--focus {
   .select2-selection--single {
-    // box-shadow: 0 0 0 $btn-focus-width rgba($primary, .5);
     outline: 1px dotted $body-color;
     outline-offset: 3px;
-    // outline: none;
   }
 }

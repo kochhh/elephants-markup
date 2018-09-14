@@ -47,7 +47,7 @@
 
 .content {
   @include media-breakpoint-down(sm) {
-    padding-top: 85px;
+    padding-top: 88px;
     padding-bottom: 40px;
   }
 
@@ -80,9 +80,13 @@
 
   &__item {
     color: #B3B3B3;
-    font-size: rem(16);
-    font-weight: 500;
+    font-size: 0.857rem;
     text-transform: uppercase;
+
+    @include media-breakpoint-up(md) {
+      font-size: rem(16);
+      font-weight: 500;
+    }
 
     + .breadcrumbs__item {
       &::before {
@@ -101,6 +105,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
 
   &__item {
     font-size: rem(15);

@@ -30,8 +30,12 @@
 }
 
 .categories {
-  margin-bottom: 0.5em;
+  margin-bottom: 20px;
   position: relative;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0.5em;
+  }
 }
 
 .dotted {
@@ -52,24 +56,25 @@
   right: 0;
   top: 0;
 
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
   &:hover {
     .caret {
       fill: $primary;
     }
   }
-
-  @include media-breakpoint-down(sm) {
-    display: none;
-  }
 }
 
 .categories-links {
   @include list-unstyled;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0;
 
-  @include media-breakpoint-up(md) {
-    display: flex;
-    flex-wrap: wrap;
+  @include media-breakpoint-down(sm) {
+    display: none;
   }
 
   &__item {
@@ -140,12 +145,12 @@
   @include transition(all 0.2s ease-in-out);
   backface-visibility: hidden;
   display: grid;
+  grid-column-gap: 20px;
   grid-template-areas:
-    "pic body"
+    "picture body"
     "quantity button";
   grid-template-columns: 96px minmax(130px, 1fr);
   grid-template-rows: auto;
-  grid-column-gap: 20px;
   justify-content: space-between;
   overflow: hidden;
   padding: 6%;
@@ -154,8 +159,14 @@
 
   @include media-breakpoint-down(sm) {
     @media (orientation: landscape) {
-      grid-template-columns: 96px minmax(116px, 1fr);
+      grid-column-gap: 10px;
+      grid-template-columns: 86px minmax(116px, 1fr);
     }
+  }
+
+  @include media-breakpoint-up(xs) {
+    grid-column-gap: 10px;
+    grid-template-columns: 86px minmax(116px, 1fr);
   }
 
   @include media-breakpoint-up(md) {
@@ -172,6 +183,7 @@
   &__pic {
     align-items: center;
     display: flex;
+    grid-area: picture;
     justify-content: center;
     margin-left: -42px;
     margin-bottom: 20px;
@@ -216,6 +228,7 @@
   &__body {
     display: flex;
     flex-direction: column;
+    grid-area: body;
     justify-content: space-between;
     margin-bottom: 20px;
   }
@@ -265,6 +278,20 @@
       opacity: 0;
       visibility: hidden;
     }
+  }
+
+  &__quantity {
+    grid-area: quantity;
+
+    .qnt-widget {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    grid-area: button;
   }
 }
 
@@ -501,7 +528,11 @@ input[type=number] {
 
   &__list {
     @include list-unstyled;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -509,12 +540,16 @@ input[type=number] {
     font-size: 1rem;
     line-height: $headings-line-height;
 
-    + .advantages-show__item {
-      margin-top: 1.35em;
-    }
-
     @include media-breakpoint-up(xl) {
       font-size: rem(20);
+    }
+
+    + .advantages-show__item {
+      margin-top: 0.75em;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 1.35em;
+      }
     }
   }
 

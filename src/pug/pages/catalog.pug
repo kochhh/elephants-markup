@@ -47,6 +47,9 @@ block content
         h1.h1 Торты
         section.section-content
           .categories
+            select.categories-select-mobile.js-select
+              each item in ["Все торты", "Свадебные", "Детские", "Корпоративные", "Праздничные"]
+                option(name=item)= item
             a.categories-trigger(href="#")
               span.dotted Все категории
               +icon('caret', 'caret')
@@ -76,8 +79,8 @@ block content
                         label(for="cake-1-select").sr-only Выберите
                         select.js-select-dotted#cake-1-select
                           option(name="Медовик" selected) Медовик
-                          option(name="Хуевик") Хуевик
-                          option(name="Маховик") Маховик
+                          option(name="Медовичок") Медовичок
+                          option(name="Медовичок Xs Max 512GB") Медовичок Xs Max 512GB
                       .catalog-card__form-group
                         span.qnt-check-label Ярусов
                         .qnt-check-item
@@ -113,8 +116,8 @@ block content
                         label(for="cake-2-select").sr-only Выберите
                         select.js-select-dotted#cake-2-select
                           option(name="Варёная сгущёнка и орехи" selected) Варёная сгущёнка и орехи
-                          option(name="Хуй да ничего плюс шиш с маслом") Хуй да ничего плюс шиш с маслом
-                          option(name="И ещё маховик") И ещё маховик
+                          option(name="Козе баян, Кузьме сюртук да шиш с маслом") Козе баян, Кузьме сюртук да шиш с маслом
+                          option(name="Wow") Wow
                       .catalog-card__form-group.catalog-card__form-group--price
                         .catalog-card__weight
                           label(for="cake-2-weight").sr-only Вес

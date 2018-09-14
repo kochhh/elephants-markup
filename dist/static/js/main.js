@@ -9,6 +9,12 @@ $(function() {
     width: '100%'
   });
 
+  $('.js-select').select2({
+    theme: 'default',
+    minimumResultsForSearch: -1,
+    width: '100%'
+  });
+
   // Number input
   $('<button type="button" class="btn qnt-button qnt-button--down"><span class="sr-only">&minus;</span></button><button type="button" class="btn qnt-button qnt-button--up"><span class="sr-only">&plus;</span></button>').appendTo('.qnt-widget');
 

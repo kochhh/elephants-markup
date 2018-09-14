@@ -5,6 +5,7 @@
   @include media-breakpoint-down(md) {
     .page-inner & {
       background-color: #fff;
+      border-bottom: 1px solid #E6E6E6;
     }
   }
 
@@ -18,6 +19,14 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.navbar-logo {
+  @include size(51px, 36px);
+  @include absolute-center;
+  background: url('../img/general/logo-sm.svg') no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
 }
 
 .navbar-toggler {
