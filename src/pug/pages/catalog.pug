@@ -47,9 +47,10 @@ block content
         h1.h1 Торты
         section.section-content
           .categories
-            select.categories-select-mobile.js-select
-              each item in ["Все торты", "Свадебные", "Детские", "Корпоративные", "Праздничные"]
-                option(name=item)= item
+            .categories-select-mobile
+              select.js-select
+                each item in ["Все торты", "Свадебные", "Детские", "Корпоративные", "Праздничные"]
+                  option(name=item)= item
             a.categories-trigger(href="#")
               span.dotted Все категории
               +icon('caret', 'caret')

@@ -49,6 +49,12 @@
   @include transition(fill 0.15s ease-in-out);
 }
 
+.categories-select-mobile {
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
 .categories-trigger {
   color: $body-color;
   font-size: rem(15);
