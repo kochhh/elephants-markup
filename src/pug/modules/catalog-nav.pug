@@ -15,11 +15,7 @@
                   a.main-menu__link(href=item.link)= item.name
           .catalog-nav-footer
             a.foot-logo(href="index.html" title=siteTitle)= siteTitle
-            ul.foot-menu
-              - menu = [{ "name": "Каталог", "link": "catalog.html" }, { "name": "Оплата и доставка", "link": "delivery.html" }, { "name": "Отзывы", "link": "reviews.html" }, { "name": "Акции", "link": "promotions.html" }, { "name": "Где купить", "link": "shops.html" }]
-              each item in menu
-                li.foot-menu__item
-                  a.foot-menu__link(href=item.link)= item.name
+            include ../modules/foot-menu
             .navbar-side.navbar-side--right
               .social
                 a.social__link(href="#" title="Facebook")

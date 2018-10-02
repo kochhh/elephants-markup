@@ -1,12 +1,12 @@
 // Fontisto
 // @import "fontisto/fontisto-brands.scss";
 
-// Flickity
-// @import "../../../node_modules/flickity/dist/flickity";
-
 // Brand colors
 @import "../../../node_modules/brand-colors/dist/latest/scss/brand-colors.latest";
 
 // Select2
 @import "../../../node_modules/select2/src/scss/core";
 @import "../vendors/select2/layout";
+
+// Owl carousel
+@import "owl.carousel/owl.carousel";

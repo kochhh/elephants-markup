@@ -1,0 +1,212 @@
+extends ../layout/main
+
+block variables
+  - var siteTitle = "Кондитерская «Белые слоны»"
+  - var title = "Торт «Дикая роза»"
+  - var pageClass = "page-inner page-product"
+
+block background
+  .background(style="background-image: url(./static/img/content/bg-dark.jpg);")
+
+block side-links
+  .side-links
+    a.side-links__link(href="catalog.html" data-toggle="modal" data-target="#catalog-nav" title="Каталог")
+      span Каталог
+    a.side-links__link(href="contacts.html" title="Контакты")
+      span Контакты
+
+block nav-links
+  .nav-links
+    a.nav-links__link.nav-links__link--left(href="javascript:history.back()" title="Назад")
+      +icon("arrow")
+
+block aside
+  .aside
+    button.btn.btn-white.btn-add(type="button")
+      span.sr-only Добавить
+
+block content
+  .content-container.container
+    .content-wrapper
+      .content
+        ul.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Каталог
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Торты
+          li.breadcrumbs__item Дикая роза
+        h1.h1= title
+
+        form(action="/")
+          .product-photo-slider.owl-carousel
+            .product-photo-item
+              img(src="static/img/content/product.jpg" alt="")
+            .product-photo-item
+              img(src="static/img/content/product.jpg" alt="")
+            .product-photo-item
+              img(src="static/img/content/product.jpg" alt="")
+            .product-photo-item
+              img(src="static/img/content/product.jpg" alt="")
+          .filling-select-container
+            .filling-select
+              .filling-select-item
+                input.filling-select-item__radio#cake-1-fill-1(type="radio" name="cake-1-fill" value="cake-1-fill-1" checked)
+                label.filling-select-item__label(for="cake-1-fill-1")
+                  span.filling-select-item__name Медовые коржи с&nbsp;варёной сгущенкой
+                  img.filling-select-item__pic(src="http://picsum.photos/200/90?photo=10" alt="")
+              .filling-select-item
+                input.filling-select-item__radio#cake-1-fill-2(type="radio" name="cake-1-fill" value="cake-1-fill-2")
+                label.filling-select-item__label(for="cake-1-fill-2")
+                  span.filling-select-item__name Фруктовая с&nbsp;клубникой
+                  img.filling-select-item__pic(src="http://picsum.photos/200/90?photo=11" alt="")
+              .filling-select-item
+                input.filling-select-item__radio#cake-1-fill-3(type="radio" name="cake-1-fill" value="cake-1-fill-3")
+                label.filling-select-item__label(for="cake-1-fill-3")
+                  span.filling-select-item__name Фруктовая с&nbsp;черносливом
+                  img.filling-select-item__pic(src="http://picsum.photos/200/90?photo=12" alt="")
+              .filling-select-item
+                input.filling-select-item__radio#cake-1-fill-4(type="radio" name="cake-1-fill" value="cake-1-fill-4")
+                label.filling-select-item__label(for="cake-1-fill-4")
+                  span.filling-select-item__name Фруктовая с&nbsp;клубникой
+                  img.filling-select-item__pic(src="http://picsum.photos/200/90?photo=11" alt="")
+              .filling-select-item
+                input.filling-select-item__radio#cake-1-fill-5(type="radio" name="cake-1-fill" value="cake-1-fill-5")
+                label.filling-select-item__label(for="cake-1-fill-5")
+                  span.filling-select-item__name Фруктовая с&nbsp;черносливом
+                  img.filling-select-item__pic(src="http://picsum.photos/200/90?photo=12" alt="")
+              .filling-select-item
+                input.filling-select-item__radio#cake-1-fill-6(type="radio" name="cake-1-fill" value="cake-1-fill-6")
+                label.filling-select-item__label(for="cake-1-fill-6")
+                  span.filling-select-item__name Фруктовая с&nbsp;черносливом
+                  img.filling-select-item__pic(src="http://picsum.photos/200/90?photo=12" alt="")
+          ul.product-props
+            li.product-props__item
+              .product-props__title Состав
+              .product-props__content
+                ul.product-props-list
+                  li.product-props-list__item
+                    a.product-props-list__link.dotted.js-ingredients-tooltip(href="#" data-toggle="tooltip" data-placement="bottom" title="Крем из фермерской сметаны, взбитой с сахаром и ванилью") кондитерская мастика
+                  li.product-props-list__item
+                    a.product-props-list__link.dotted.js-ingredients-tooltip(href="#" data-toggle="tooltip" data-placement="bottom" title="Крем из фермерской сметаны, взбитой с сахаром и ванилью") бисквит на меду
+                  li.product-props-list__item
+                    a.product-props-list__link.dotted.js-ingredients-tooltip(href="#" data-toggle="tooltip" data-placement="bottom" title="Крем из фермерской сметаны, взбитой с сахаром и ванилью сметаны, взбитой с сахаром и ванилью") сметанный крем
+                  li.product-props-list__item грецкий орех
+            li.product-props__item
+              .product-props__title Энерг. ценность
+              .product-props__content 335 ккал
+            li.product-props__item
+              .product-props__title Срок хранения
+              .product-props__content 36ч при t 4±2℃
+          .summary
+            .summary__cell.summary__cell--tiers
+              .summary__form-group
+                .summary__label Ярусов
+                .summary__field
+                  span.qnt-check-item
+                    input#cake-tier-2(type="radio" name="cake-tier" value="cake-tier-2" checked)
+                    label(for="cake-tier-2") 2
+                  span.qnt-check-item
+                    input#cake-tier-3(type="radio" name="cake-tier" value="cake-tier-3")
+                    label(for="cake-tier-3") 3
+            .summary__cell.summary__cell--main
+              .summary__form-group
+                label.summary__label(for="cake-weight") Вес, кг
+                .summary__field
+                  select.js-select#cake-weight
+                    option(name="3 кг" selected) 8 кг
+                    option(name="4 кг") 2 кг
+                    option(name="5 кг") 4 кг
+              .summary__form-group
+                label.summary__label(for="cake-quantity") Количество, шт.
+                .summary__field
+                  .qnt-widget
+                    label(for="cake-quantity").sr-only Количество
+                    input.form-control#cake-quantity(type="number" min="1" max="10" step="1" value="1")
+            .summary__cell.summary__cell--price
+              .summary__price 12 720 ₽
+              .summary__rate
+                | 1 кг = 
+                strong 1 590 ₽
+            .summary__cell.summary__cell--submit
+              button.btn.btn-primary.btn-block(type="submit") В корзину
+
+        section.section-content
+          h2.h2 Похожие товары
+          form(action="/")
+            .catalog.catalog--wide(role="list")
+              .catalog-item(role="listitem")
+                .catalog-card
+                  .catalog-card__pic
+                    a(href="#" title="Торт «Тифани»")
+                      img(src="static/img/content/cupcake.jpg" alt="Торт «Тифани»")
+                  .catalog-card__body
+                    .catalog-card__title
+                      a(href="#") Торт «Тифани»
+                    .catalog-card__modify
+                      .catalog-card__form-group
+                        label(for="cake-1-select").sr-only Выберите
+                        select.js-select-dotted#cake-1-select
+                          option(name="Медовик" selected) Медовик
+                          option(name="Медовичок") Медовичок
+                          option(name="Медовичок Xs Max 512GB") Медовичок Xs Max 512GB
+                      .catalog-card__form-group
+                        span.qnt-check-label Ярусов
+                        .qnt-check-item
+                          input#cake-1-tier-2(type="radio" name="cake-1-tier" value="cake-1-tier-2" checked)
+                          label(for="cake-1-tier-2") 2
+                        .qnt-check-item
+                          input#cake-1-tier-3(type="radio" name="cake-1-tier" value="cake-1-tier-3")
+                          label(for="cake-1-tier-3") 3
+                        .qnt-check-item
+                          input#cake-1-tier-4(type="radio" name="cake-1-tier" value="cake-1-tier-4")
+                          label(for="cake-1-tier-4") 4
+                      .catalog-card__form-group.catalog-card__form-group--price
+                        .catalog-card__weight
+                          label(for="cake-1-weight").sr-only Вес
+                          select.js-select-dotted#cake-1-weight
+                            option(name="3 кг" selected) 3 кг
+                            option(name="4 кг") 4 кг
+                            option(name="5 кг") 5 кг
+                        .catalog-card__price 4 960 ₽
+                  .catalog-card__quantity
+                  .catalog-card__button
+                    button.btn.btn-primary.btn-block(type="submit") В корзину
+              .catalog-item(role="listitem")
+                .catalog-card
+                  .catalog-card__pic
+                    a(href="#" title="Торт «1041 Белоснежный с розами»")
+                      img(src="static/img/content/cupcake.jpg" alt="Торт «1041 Белоснежный с розами»")
+                  .catalog-card__body
+                    .catalog-card__title
+                      a(href="#") Торт «1041 Белоснежный с розами»
+                    .catalog-card__modify
+                      .catalog-card__form-group
+                        label(for="cake-2-select").sr-only Выберите
+                        select.js-select-dotted#cake-2-select
+                          option(name="Медовик" selected) Медовик
+                          option(name="Медовичок") Медовичок
+                          option(name="Медовичок Xs Max 512GB") Медовичок Xs Max 512GB
+                      .catalog-card__form-group
+                        span.qnt-check-label Ярусов
+                        .qnt-check-item
+                          input#cake-2-tier-2(type="radio" name="cake-2-tier" value="cake-2-tier-2" checked)
+                          label(for="cake-1-tier-2") 2
+                        .qnt-check-item
+                          input#cake-2-tier-3(type="radio" name="cake-2-tier" value="cake-2-tier-3")
+                          label(for="cake-1-tier-3") 3
+                        .qnt-check-item
+                          input#cake-2-tier-3(type="radio" name="cake-2-tier" value="cake-2-tier-4")
+                          label(for="cake-2-tier-4") 4
+                      .catalog-card__form-group.catalog-card__form-group--price
+                        .catalog-card__weight
+                          label(for="cake-2-weight").sr-only Вес
+                          select.js-select-dotted#cake-2-weight
+                            option(name="3 кг" selected) 3 кг
+                            option(name="4 кг") 4 кг
+                            option(name="5 кг") 5 кг
+                        .catalog-card__price 4 960 ₽
+                  .catalog-card__quantity
+                  .catalog-card__button
+                    button.btn.btn-primary.btn-block(type="submit") В корзину
+        include ../modules/call-us
+        include ../modules/foot-menu

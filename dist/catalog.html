@@ -13,7 +13,7 @@
   <link href="static/css/main.css" rel="stylesheet">
   <script src="static/js/modernizr-custom.js"></script>
 </head>
-<body class="page-inner page-products">
+<body class="page-inner page-catalog">
   <div class="background" style="background-image: url(./static/img/content/bg-dark.jpg);"></div>
   <header class="header fixed-top">
     <nav class="navbar">
@@ -59,7 +59,7 @@
             <li class="helpful-links__item"><a class="helpful-links__link" href="#">Преимущества тортов «Белые слоны»</a></li>
             <li class="helpful-links__item"><a class="helpful-links__link" href="#">Как мы доставляем?</a></li>
           </ul>
-          <h1 class="h1">Торты</h1>
+          <h1 class="h1">Каталог</h1>
           <section class="section-content">
             <div class="categories">
               <div class="categories-select-mobile">
@@ -69,18 +69,23 @@
                   <option name="Детские">Детские</option>
                   <option name="Корпоративные">Корпоративные</option>
                   <option name="Праздничные">Праздничные</option>
+                  <option name="На 23 февраля">На 23 февраля</option>
+                  <option name="День святого Валентина">День святого Валентина</option>
+                  <option name="На 8 марта">На 8 марта</option>
+                  <option name="На Новый год">На Новый год</option>
+                  <option name="На юбилей">На юбилей</option>
+                  <option name="Низкокалорийные торты">Низкокалорийные торты</option>
+                  <option name="Торты без мастики">Торты без мастики</option>
+                  <option name="Торты для выпускного">Торты для выпускного</option>
+                  <option name="Фототорты">Фототорты</option>
+                  <option name="Торты для девочек">Торты для девочек</option>
                 </select>
-              </div><a class="categories-trigger" href="#"><span class="dotted">Все категории</span>
-                <svg class="icon icon-caret caret">
-                  <use xlink:href="static/img/svg/symbol/sprite.svg#caret"></use>
-                </svg></a>
-              <ul class="categories-links">
-                <li class="categories-links__item is-active"><a class="categories-links__link" href="#">Все торты</a></li>
-                <li class="categories-links__item"><a class="categories-links__link" href="#">Свадебные</a></li>
-                <li class="categories-links__item"><a class="categories-links__link" href="#">Детские</a></li>
-                <li class="categories-links__item"><a class="categories-links__link" href="#">Корпоративные</a></li>
-                <li class="categories-links__item"><a class="categories-links__link" href="#">Праздничные</a></li>
-              </ul>
+              </div>
+              <div class="categories-links"><a class="categories-links__trigger" href="#"><span class="dotted">Все категории</span>
+                  <svg class="icon icon-caret caret">
+                    <use xlink:href="static/img/svg/symbol/sprite.svg#caret"></use>
+                  </svg></a><a class="categories-links__link is-active" href="#">Все торты</a><a class="categories-links__link is-hidden" href="#">Свадебные</a><a class="categories-links__link is-hidden" href="#">Детские</a><a class="categories-links__link is-hidden" href="#">Корпоративные</a><a class="categories-links__link is-hidden" href="#">Праздничные</a><a class="categories-links__link is-hidden" href="#">На 23 февраля</a><a class="categories-links__link is-hidden" href="#">День святого Валентина</a><a class="categories-links__link is-hidden" href="#">На 8 марта</a><a class="categories-links__link is-hidden" href="#">На Новый год</a><a class="categories-links__link is-hidden" href="#">На юбилей</a><a class="categories-links__link is-hidden" href="#">Низкокалорийные торты</a><a class="categories-links__link is-hidden" href="#">Торты без мастики</a><a class="categories-links__link is-hidden" href="#">Торты для выпускного</a><a class="categories-links__link is-hidden" href="#">Фототорты</a><a class="categories-links__link is-hidden" href="#">Торты для девочек</a>
+              </div>
             </div>
             <form action="/">
               <div class="catalog" role="list">
@@ -98,16 +103,11 @@
                             <option name="Медовичок Xs Max 512GB">Медовичок Xs Max 512GB</option>
                           </select>
                         </div>
-                        <div class="catalog-card__form-group"><span class="qnt-check-label">Ярусов</span>
-                          <div class="qnt-check-item">
+                        <div class="catalog-card__form-group"><span class="qnt-check-label">Ярусов</span><span class="qnt-check-item">
                             <input id="cake-1-tier-2" type="radio" name="cake-1-tier" value="cake-1-tier-2" checked>
-                            <label for="cake-1-tier-2">2</label>
-                          </div>
-                          <div class="qnt-check-item">
+                            <label for="cake-1-tier-2">2</label></span><span class="qnt-check-item">
                             <input id="cake-1-tier-3" type="radio" name="cake-1-tier" value="cake-1-tier-3">
-                            <label for="cake-1-tier-3">3</label>
-                          </div>
-                        </div>
+                            <label for="cake-1-tier-3">3</label></span></div>
                         <div class="catalog-card__form-group catalog-card__form-group--price">
                           <div class="catalog-card__weight">
                             <label class="sr-only" for="cake-1-weight">Вес</label>
@@ -235,10 +235,13 @@
           <section class="section-content">
             <h2 class="h2">Вам также могут быть интересны</h2>
             <div class="categories">
-              <ul class="categories-links">
-                <li class="categories-links__item is-active"><a class="categories-links__link" href="#">Десерты</a></li>
-                <li class="categories-links__item"><a class="categories-links__link" href="#">Выпечка</a></li>
-              </ul>
+              <div class="categories-select-mobile">
+                <select class="js-select">
+                  <option name="Десерты">Десерты</option>
+                  <option name="Выпечка">Выпечка</option>
+                </select>
+              </div>
+              <div class="categories-links"><a class="categories-links__link is-active" href="#">Десерты</a><a class="categories-links__link" href="#">Выпечка</a></div>
             </div>
             <form action="/">
               <div class="catalog" role="list">
@@ -383,6 +386,10 @@
               </div>
             </div>
           </section>
+          <dl class="call-us">
+            <dt class="call-us__title">Звонок бесплатный</dt>
+            <dd class="call-us__number"><a href="#">8 800 550 9050</a></dd>
+          </dl>
           <ul class="foot-menu">
             <li class="foot-menu__item"><a class="foot-menu__link" href="catalog.html">Каталог</a></li>
             <li class="foot-menu__item"><a class="foot-menu__link" href="delivery.html">Оплата и доставка</a></li>
@@ -394,11 +401,13 @@
       </div>
     </div>
   </main>
-  <ol class="advantages">
-    <li class="advantages__item"><span class="advantages__span">Собственные рецепты</span></li>
-    <li class="advantages__item"><span class="advantages__span">Внимание к&nbsp;деталям</span></li>
-    <li class="advantages__item"><span class="advantages__span">Свежие и&nbsp;натуральные ингредиенты</span></li>
-  </ol>
+  <div class="aside">
+    <ol class="advantages">
+      <li class="advantages__item"><span class="advantages__span">Собственные рецепты</span></li>
+      <li class="advantages__item"><span class="advantages__span">Внимание к&nbsp;деталям</span></li>
+      <li class="advantages__item"><span class="advantages__span">Свежие и&nbsp;натуральные ингредиенты</span></li>
+    </ol>
+  </div>
   <footer class="footer">
     <div class="container">
       <div class="footer-container"><a class="foot-logo" href="index.html" title="Кондитерская «Белые слоны»">Кондитерская «Белые слоны»</a>

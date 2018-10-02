@@ -4,6 +4,7 @@
   .select2-dropdown {
     border: none;
     border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
     &--below {
       margin-top: 5px;
@@ -14,37 +15,33 @@
     }
   }
 
-  .select2-results > .select2-results__options {
-    max-height: 200px;
-    overflow-y: auto;
-  }
+  .select2-results {
+    &__options {
+      max-height: 200px;
+      overflow-y: auto;
+    }
 
-  .select2-results__option {
-    border-bottom: 1px dotted $body-color;
-    font-size: 13px;
-    line-height: 18px;
-    padding: 4px 0;
-
-    @include media-breakpoint-up(md) {
+    &__option {
       font-size: 14px;
-    }
+      line-height: 18px;
+      padding: 10px;
 
-    &:last-child {
-      border-bottom: none;
-    }
+      &[aria-disabled=true] {
+        color: #999;
+      }
 
-    &[aria-disabled=true] {
-      color: #999;
-    }
+      &[aria-selected=true] {
+        color: $primary !important;
+        font-weight: 500;
+      }
 
-    &[aria-selected=true] {
-      color: $primary;
-      font-weight: 500;
+      &--highlighted {
+        &[aria-selected] {
+          background-color: #f5f5f5;
+          color: #000;
+        }
+      }
     }
-  }
-
-  .select2-results__option--highlighted[aria-selected] {
-    color: $primary;
   }
 }
 
@@ -52,8 +49,9 @@
   @import "default/single";
 
   .select2-dropdown {
-    border: 1px solid #E1E1E1;
+    border: none;
     border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
     &--below {
       margin-top: -1px;
@@ -64,29 +62,31 @@
     }
   }
 
-  .select2-results > .select2-results__options {
-    max-height: 200px;
-    overflow-y: auto;
-  }
-
-  .select2-results__option {
-    font-size: 14px;
-    line-height: 18px;
-    padding: 8px 14px;
-
-    &[aria-disabled=true] {
-      color: #999;
+  .select2-results {
+    &__options {
+      max-height: 200px;
+      overflow-y: auto;
     }
 
-    &[aria-selected=true] {
-      color: $primary !important;
-      font-weight: 500;
-    }
+    &__option {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 10px 14px;
 
-    &--highlighted {
-      &[aria-selected] {
-        background-color: #f5f5f5;
-        color: #000;
+      &[aria-disabled=true] {
+        color: #999;
+      }
+
+      &[aria-selected=true] {
+        color: $primary !important;
+        font-weight: 500;
+      }
+
+      &--highlighted {
+        &[aria-selected] {
+          background-color: #f5f5f5;
+          color: #000;
+        }
       }
     }
   }

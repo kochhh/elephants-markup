@@ -1,6 +1,9 @@
 .select2-selection--single {
   background-color: #fff;
-  border-bottom: 1px dotted $body-color;
+  background-image: linear-gradient(to right, $body-color, $body-color 25%, transparent 25%, transparent 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
   display: block;
   height: auto;
   width: 100%;
@@ -8,7 +11,7 @@
   .select2-selection__rendered {
     color: $body-color;
     font-size: 13px;
-    line-height: 18px;
+    line-height: 20px;
     padding-left: 0;
     padding-right: 12px;
 
@@ -24,8 +27,8 @@
   .select2-selection__arrow {
     @include size(10px, 6px);
     background: url('../img/general/caret.svg') no-repeat;
-    bottom: 6.5px;
     position: absolute;
+    top: 7px;
     right: 0;
   }
 }
@@ -51,7 +54,7 @@
 
 &.select2-container--focus {
   .select2-selection--single {
-    outline: 1px dotted $body-color;
-    outline-offset: 3px;
+    box-shadow: 0 0 0 $btn-focus-width rgba($primary, .5);
+    outline: none;
   }
 }

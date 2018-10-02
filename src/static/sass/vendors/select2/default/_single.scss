@@ -39,6 +39,10 @@
 
 &.select2-container--open {
   .select2-selection--single {
+    .select2-selection__rendered {
+      color: #B3B3B3;
+    }
+
     .select2-selection__arrow {
       transform: rotate(-180deg);
     }

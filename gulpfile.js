@@ -5,8 +5,9 @@ global.$ = {
   gulp: require('gulp'),
   del: require('del'),
   fs: require('fs'),
-  browserSync: require('browser-sync').create(),
   inject: require('gulp-inject'),
+  gcmq: require('gulp-group-css-media-queries'),
+  browserSync: require('browser-sync').create(),
   glp: require('gulp-load-plugins')()
 };
 

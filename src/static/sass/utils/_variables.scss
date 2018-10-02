@@ -63,7 +63,7 @@ $colors: map-merge(
     // "green":      $green,
     // "teal":       $teal,
     // "cyan":       $cyan,
-    // "white":      $white,
+    "white":      $white,
     // "gray":       $gray-600,
     // "gray-dark":  $gray-800
   ),
@@ -91,6 +91,7 @@ $theme-colors: map-merge(
     // "danger":     $danger,
     // "light":      $light,
     // "dark":       $dark
+    "white":      $white
   ),
   $theme-colors
 );
@@ -731,18 +732,18 @@ $input-focus-border-color:              $input-border-color;
 
 // // Tooltips
 
-// $tooltip-font-size:                 $font-size-sm !default;
-// $tooltip-max-width:                 200px !default;
-// $tooltip-color:                     $white !default;
-// $tooltip-bg:                        $black !default;
-// $tooltip-border-radius:             $border-radius !default;
-// $tooltip-opacity:                   .9 !default;
-// $tooltip-padding-y:                 .25rem !default;
-// $tooltip-padding-x:                 .5rem !default;
+$tooltip-font-size:                 12px;
+$tooltip-max-width:                 400px;
+$tooltip-color:                     $body-color;
+$tooltip-bg:                        $white;
+$tooltip-border-radius:             0;
+$tooltip-opacity:                   1;
+$tooltip-padding-y:                 0.565rem;
+$tooltip-padding-x:                 0.755rem;
 // $tooltip-margin:                    0 !default;
 
 // $tooltip-arrow-width:               .8rem !default;
-// $tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-height:              1.15rem;
 // $tooltip-arrow-color:               $tooltip-bg !default;
 
 

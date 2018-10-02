@@ -1,0 +1,5 @@
+ul.foot-menu
+  - menu = [{ "name": "Каталог", "link": "catalog.html" }, { "name": "Оплата и доставка", "link": "delivery.html" }, { "name": "Отзывы", "link": "reviews.html" }, { "name": "Акции", "link": "promotions.html" }, { "name": "Где купить", "link": "shops.html" }]
+  each item in menu
+    li.foot-menu__item
+      a.foot-menu__link(href=item.link)= item.name

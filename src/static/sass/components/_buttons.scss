@@ -9,3 +9,31 @@
 .btn-primary {
   color: #fff;
 }
+
+.btn-add {
+  @include size(71px);
+  background: none;
+  border: 3px solid $white;
+  border-radius: 50%;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include size(21px, 3px);
+    @include absolute-center;
+    background-color: $white;
+    content: '';
+    @include transition($transition-base);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $body-color;
+    }
+  }
+}

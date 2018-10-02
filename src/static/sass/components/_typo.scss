@@ -1,3 +1,42 @@
 a {
   @include transition($transition-base);
 }
+
+.dotted {
+  position: relative;
+
+  &::before,
+  &::after {
+    @include absolute(null, 0, 0, 0);
+    @include transition($transition-fade);
+    background-image: linear-gradient(to right, $link-color, $link-color 25%, transparent 25%, transparent 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 1px;
+    content: '';
+    height: 1px;
+  }
+
+  &::after {
+    background-image: linear-gradient(to right, $link-hover-color, $link-hover-color 25%, transparent 25%, transparent 100%);
+    opacity: 0;
+  }
+
+  &:hover {
+    &::before { opacity: 0; }
+    &::after { opacity: 1; }
+  }
+}
+
+.caret {
+  @include size(10px, 6px);
+  fill: $body-color;
+  margin-left: 1px;
+  @include transition(fill 0.15s ease-in-out);
+}
+
+.tooltip-inner {
+  border: 1px solid #F7E8E3;
+  box-shadow: 0 4px 4px rgba(51, 62, 80, 0.06);
+  text-align: left;
+}

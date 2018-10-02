@@ -3,7 +3,8 @@ extends ../layout/main
 block variables
   - var siteTitle = "Кондитерская «Белые слоны»"
   - var title = "Каталог"
-  - var pageClass = "page-inner page-products"
+  - var pageClass = "page-inner page-catalog"
+  - var cakes = ["Свадебные", "Детские", "Корпоративные", "Праздничные", "На 23 февраля", "День святого Валентина", "На 8 марта", "На Новый год", "На юбилей", "Низкокалорийные торты", "Торты без мастики", "Торты для выпускного", "Фототорты", "Торты для девочек"]
 
 block background
   .background(style="background-image: url(./static/img/content/bg-dark.jpg);")
@@ -20,14 +21,15 @@ block nav-links
     a.nav-links__link.nav-links__link--left(href="javascript:history.back()" title="Назад")
       +icon("arrow")
 
-block advantages
-  ol.advantages
-    li.advantages__item
-      span.advantages__span Собственные рецепты
-    li.advantages__item
-      span.advantages__span Внимание к&nbsp;деталям
-    li.advantages__item
-      span.advantages__span Свежие и&nbsp;натуральные ингредиенты
+block aside
+  .aside
+    ol.advantages
+      li.advantages__item
+        span.advantages__span Собственные рецепты
+      li.advantages__item
+        span.advantages__span Внимание к&nbsp;деталям
+      li.advantages__item
+        span.advantages__span Свежие и&nbsp;натуральные ингредиенты
 
 block content
   .content-container.container
@@ -44,27 +46,21 @@ block content
             a.helpful-links__link(href="#") Преимущества тортов «Белые слоны»
           li.helpful-links__item
             a.helpful-links__link(href="#") Как мы доставляем?
-        h1.h1 Торты
+        h1.h1= title
         section.section-content
           .categories
             .categories-select-mobile
               select.js-select
-                each item in ["Все торты", "Свадебные", "Детские", "Корпоративные", "Праздничные"]
+                option(name="Все торты") Все торты
+                each item in cakes
                   option(name=item)= item
-            a.categories-trigger(href="#")
-              span.dotted Все категории
-              +icon('caret', 'caret')
-            ul.categories-links
-              li.categories-links__item.is-active
-                a.categories-links__link(href="#") Все торты
-              li.categories-links__item
-                a.categories-links__link(href="#") Свадебные
-              li.categories-links__item
-                a.categories-links__link(href="#") Детские
-              li.categories-links__item
-                a.categories-links__link(href="#") Корпоративные
-              li.categories-links__item
-                a.categories-links__link(href="#") Праздничные
+            .categories-links
+              a.categories-links__trigger(href="#")
+                span.dotted Все категории
+                +icon('caret', 'caret')
+              a.categories-links__link.is-active(href="#") Все торты
+              each item in cakes
+                a.categories-links__link.is-hidden(href="#")= item
           form(action="/")
             .catalog(role="list")
               .catalog-item(role="listitem")
@@ -84,10 +80,10 @@ block content
                           option(name="Медовичок Xs Max 512GB") Медовичок Xs Max 512GB
                       .catalog-card__form-group
                         span.qnt-check-label Ярусов
-                        .qnt-check-item
+                        span.qnt-check-item
                           input#cake-1-tier-2(type="radio" name="cake-1-tier" value="cake-1-tier-2" checked)
                           label(for="cake-1-tier-2") 2
-                        .qnt-check-item
+                        span.qnt-check-item
                           input#cake-1-tier-3(type="radio" name="cake-1-tier" value="cake-1-tier-3")
                           label(for="cake-1-tier-3") 3
                       .catalog-card__form-group.catalog-card__form-group--price
@@ -183,11 +179,13 @@ block content
         section.section-content
           h2.h2 Вам также могут быть интересны
           .categories
-            ul.categories-links
-              li.categories-links__item.is-active
-                a.categories-links__link(href="#") Десерты
-              li.categories-links__item
-                a.categories-links__link(href="#") Выпечка
+            .categories-select-mobile
+              select.js-select
+                each item in ["Десерты", "Выпечка"]
+                  option(name=item)= item
+            .categories-links
+              a.categories-links__link.is-active(href="#") Десерты
+              a.categories-links__link(href="#") Выпечка
           form(action="/")
             .catalog(role="list")
               - var cakes = [{ name: "Капкейк «Морковный»", weight: 150, price: 120 }, { name: "Мини-тортик «Сладкоежка»", weight: 140, price: 155 }, { name: "Капкейк «Свадебный»", weight: 90, price: 155 }, { name: "Мини-тортик «Роза»", weight: 180, price: 270 }]
@@ -252,8 +250,5 @@ block content
                     p Мы давно перестали соблюдать какие-либо требования санитарной госавтоинспекции. Наши торты вы никогда не забудете за их уникальный солоноватый вкус.
                     p Звоните сейчас!
                     p Без регистрации и смс!
-        ul.foot-menu
-          - menu = [{ "name": "Каталог", "link": "catalog.html" }, { "name": "Оплата и доставка", "link": "delivery.html" }, { "name": "Отзывы", "link": "reviews.html" }, { "name": "Акции", "link": "promotions.html" }, { "name": "Где купить", "link": "shops.html" }]
-          each item in menu
-            li.foot-menu__item
-              a.foot-menu__link(href=item.link)= item.name
+        include ../modules/call-us
+        include ../modules/foot-menu

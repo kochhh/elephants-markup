@@ -4,8 +4,8 @@ module.exports = function() {
         './node_modules/jquery/dist/jquery.js',
         './node_modules/svg4everybody/dist/svg4everybody.js',
         './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-        './node_modules/flickity/dist/flickity.pkgd.js',
-        './node_modules/select2/dist/js/select2.min.js'
+        './node_modules/owl.carousel/dist/owl.carousel.js',
+        './node_modules/select2/dist/js/select2.js'
       ])
       .pipe($.glp.concat('libs.js'))
       .pipe($.gulp.dest('./dist/static/js/'))
@@ -19,8 +19,8 @@ module.exports = function() {
         './node_modules/jquery/dist/jquery.js',
         './node_modules/svg4everybody/dist/svg4everybody.js',
         './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-        './node_modules/flickity/dist/flickity.pkgd.js',
-        './node_modules/select2/dist/js/select2.min.js'
+        './node_modules/owl.carousel/dist/owl.carousel.js',
+        './node_modules/select2/dist/js/select2.js'
       ])
       .pipe($.glp.concat('libs.js'))
       .pipe($.gulp.dest('./dist/static/js/'))

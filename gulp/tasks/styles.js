@@ -21,6 +21,7 @@ module.exports = function() {
     return $.gulp.src('./src/static/sass/main.scss')
       .pipe($.glp.sass())
       .pipe($.glp.autoprefixer())
+      .pipe($.gcmq())
       .pipe($.gulp.dest('./dist/static/css/'))
       .pipe($.glp.cssnano())
       .pipe($.glp.rename('main.min.css'))

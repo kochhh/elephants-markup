@@ -26,7 +26,14 @@
   @include absolute-center;
   background: url('../img/general/logo-sm.svg') no-repeat;
   background-size: cover;
+  display: none;
   text-indent: -9999px;
+
+  @include media-breakpoint-down(md) {
+    .page-inner & {
+      display: block;
+    }
+  }
 }
 
 .navbar-toggler {

@@ -142,13 +142,9 @@
   }
 }
 
-.advantages {
-  @include list-unstyled;
+.aside {
   @include fixed(50%, 50%, null, null);
-  counter-reset: advantages-list;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
+  text-align: center;
   transform: translateY(-50%);
 
   @include media-breakpoint-down(md) {
@@ -164,6 +160,14 @@
     margin-right: -(get-container-max-width(xl)/2 - $grid-gutter-width/2);
     width: $column-width-xl*2 + $grid-gutter-width;
   }
+}
+
+.advantages {
+  @include list-unstyled;
+  counter-reset: advantages-list;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
 
   &__item {
     align-items: center;
