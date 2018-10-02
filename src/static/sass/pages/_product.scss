@@ -39,6 +39,15 @@
   @include list-unstyled;
   margin-bottom: 32px;
 
+  @include media-breakpoint-up(sm) {
+    @include transition($transition-fade);
+    opacity: 0;
+
+    &.owl-loaded {
+      opacity: 1;
+    }
+  }
+
   .owl-stage-outer {
     overflow: visible;
   }
@@ -227,7 +236,13 @@
 }
 
 .product-photo-slider {
+  @include transition($transition-fade);
   margin-bottom: 60px;
+  opacity: 0;
+
+  &.owl-loaded {
+    opacity: 1;
+  }
 
   .owl-dots {
     align-items: center;
